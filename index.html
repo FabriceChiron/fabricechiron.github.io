@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Polar Eclipse</title>
+	<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+	<script type="text/javascript" src="js/script.js" defer></script>
+	<script type="text/javascript" src="js/mobile-detect.min.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<link rel="stylesheet" type="text/css" href="css/scrollbars.css">
+
+</head>
+<body>
+
+	<input type="radio" name="lang" id="lang-fr" checked>
+	<input type="radio" name="lang" id="lang-en">
+
+	<div id="skybox">
+		<div class="vr-container"> <!-- container div -->
+		    <a-scene class="vr-background"> <!-- the  a-frame embed code -->
+		      <a-entity rotation="0 0 0"> 
+		      	<!-- rotation value sets the starting view point, play around! -->
+		    	<a-animation attribute="rotation" 
+		                 dur="600000"
+		                 easing="linear"
+		                 fill="forwards"
+		                 to="0 360 0"
+		                 repeat="indefinite">
+		                 	
+                </a-animation> <!-- remove if you don’t like the automatic movement -->
+	    	    <a-sky src="img/Stellarium3.webp"></a-sky>
+		      </a-entity>
+		    </a-scene>
+		    <div class="vr-overlay-content" id="content">
+
+			        
+		        <header class="no-events" id="home">
+		    			<div class="inner-content">
+			        	<img src="img/polar-eclipse-white.svg" class="no-events fade-in">
+			        	<h1>POLAR ECLIPSE</h1>
+			        </div>
+						</header>
+
+						<nav class="sticky fade-in" id="stickyNav">
+							<ul>
+								<li><a href="#home" class="symbols sticky-only">Æ</a></li>
+								<li><a href="#playing-with-planets">Playing With Planets</a></li>
+								<li><a href="#about">About Polar Eclipse</a></li>
+								<li><label for="lang-fr">FR</label><label for="lang-en">EN</label></li>
+							</ul>
+						</nav>
+
+						<section id="playing-with-planets">
+							<div class="inner-content">
+								<h2 class="sticky">Playing With Planets</h2>
+
+								<div class="flex-group bg-1">
+									<div class="flex">
+										<div class="video-wrapper">
+											<video id="logo-animation" muted="muted" class="full-width" src="videos/animation-logo-banner.mp4" poster="videos/logo-banner.jpg" type='video/mp4; codecs="hvc1"'></video>
+										</div>
+									</div>
+								</div>
+
+								<div class="flex-group bg-1">
+
+									<div class="flex">
+
+										<div class="flex1">
+											<div class="hide-overflow">
+												<div class="lang-holder">
+													<p class="lang fr">
+														Parcourez l'espace comme jamais auparavant avec <span class="title">Playing With Planets</span>, une expérience captivante d'éducation et de divertissement en réalité virtuelle (VR) qui vous plonge au cœur de l'immensité de l'univers. Plongez-vous dans les merveilles de notre système solaire et d'autres systèmes stellaires recréés avec précision à partir des données de la NASA. Dans ce jeu captivant, vous aurez le pouvoir de tenir des planètes et des étoiles dans vos mains, découvrant leurs secrets et assistant à des événements astronomiques extraordinaires en direct.
+													</p>
+													<p class="lang en">
+														Journey through the cosmos like never before with <span class="title">Playing with Planets</span>, an awe-inspiring virtual reality (VR) edutainment experience that places you in the vastness of space. Immerse yourself in the wonders of our Solar System and other stellar systems, meticulously recreated with data from NASA.<br> In this captivating game, you'll have the power to hold planets and stars in your hands, unlocking their secrets and witnessing extraordinary astronomical events firsthand.
+													</p>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+
+									<div class="flex mobile-column">
+
+										<div class="flex1">
+											<!-- <img src="img/screenshots/warp-01.jpg"> -->
+											<video id="video-warp" muted src="videos/Warp_light.mp4" class="full-width hover-autoplay" loop poster="videos/warp.jpg"></video>
+
+											<div class="overlay text-white">
+												<div class="hide-overflow">
+													<div class="lang-holder">
+														<p class="lang fr">
+															Voyagez en hyperespace entre les systèmes stellaires, sans écran de chargement
+														</p>
+														<p class="lang en">
+															Travel in hyperspace between stellar systems, without any loading screen
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="flex1">
+											<!-- <img src="img/screenshots/warp-01.jpg"> -->
+											<video id="video-manipulate" muted src="videos/manipulate-compare_light.mp4" class="full-width hover-autoplay" loop poster="videos/manipulate-compare.jpg"></video>
+
+											<div class="overlay text-white">
+												<div class="hide-overflow">
+													<div class="lang-holder">
+														<p class="lang fr">
+															Manipulez, comparez les planètes et les étoiles avec vos propres mains ! 
+														</p>
+														<p class="lang en">
+															Manipulate, compare planets and stars with your own hands!
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										
+									</div>
+
+
+									<div class="flex">
+
+										<div class="flex1">
+											<!-- <img src="img/screenshots/warp-01.jpg"> -->
+											<video id="video-sun" muted src="videos/death-of-the-sun_light.mp4" class="full-width hover-autoplay" loop poster="videos/death-of-the-sun.jpg"></video>
+
+											<div class="overlay text-white">
+												<div class="hide-overflow">
+													<div class="lang-holder">
+														<p class="lang fr">
+															Observez des phénomènes spatiaux comme si vous y étiez 
+														</p>
+														<p class="lang en">
+															Witness spaces events as if you were there
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										
+									</div>
+									
+								</div>
+							</div>
+						</section>
+
+						<section id="about">
+							<div class="inner-content">
+								<h2 class="sticky">About me</h2>
+								
+								<div class="resume">
+									<div class="flex bg bg-2">
+										<div class="flex1">
+											<div class="part left">
+												
+												<div class="photo">
+													
+													<div class="circle">
+														<span>
+															<img class="circle-img" src="img/photos/fabrice-chiron-portrait.png">
+														</span>
+													</div>
+													
+												</div>
+
+												<div class="personal no-mobile">
+													<div class="personal-category details top-right">
+														
+															
+															<h2 class="bebas"><span class="symbols">.</span> Contact</h2>
+
+															<ul>
+																<li><span class="symbols">K</span> <a href="mailto:fabrice.chiron@polar-eclipse.com">fabrice.chiron@polar-eclipse.com</a></li>
+																<li><span class="symbols">|</span> <a href="tel:+33676398195">06 76 39 81 95</a></li>
+																<li><span class="symbols"><span class="smaller-text">ç</span></span> <a href="https://www.linkedin.com/in/fabrice-chiron-12294963/" target="_blank">fabrice-chiron-12294963</a></li>
+															</ul>
+															
+													</div>
+
+													<div class="personal-category">
+														<div class="hide-overflow">
+															<h2 class="lang-holder bebas">
+																<span class="lang fr">
+																	<span class="symbols">¡</span> Savoir-être
+																</span>
+
+																<span class="lang en">
+																	<span class="symbols">¡</span> Soft Skills
+																</span>
+															</h2>
+
+															<div class="lang-holder">
+																<p class="lang fr">Travail en équipe, Rigueur,<br>Résolution des problèmes,<br>Curiosité, Créativité, Autonomie<br>
+																...Très sympa :)</p>
+																<p class="lang en">Teamplayer, Rigorous,<br>Problem solver, Curious,<br>Creative, Autonomous<br>
+																...Nive guy :)</p>
+															</div>
+														</div>
+													</div>
+
+													<div class="personal-category details top-right">
+														<div class="hide-overflow">
+															<h2 class="lang-holder bebas">
+																<span class="lang fr">
+																	<span class="symbols">«</span> Mes Plus
+																</span>
+
+																<span class="lang en">
+																	<span class="symbols">«</span> Other Skills
+																</span>
+															</h2>
+
+															<div class="lang-holder">
+																<ul class="lang fr">
+																	<li>Français (langue maternelle)</li>
+																	<li>Anglais courant</li>
+																	<li>Méthodes Agiles: SCRUM, KANBAN</li>
+																</ul>
+																<ul class="lang en">
+																	<li>French: native language</li>
+																	<li>English: Fluent</li>
+																	<li>Agile Methods: SCRUM, KANBAN</li>
+																</ul>
+															</div>
+														</div>
+														
+													</div>
+
+													<div class="personal-category details bottom-right">
+														<div class="hide-overflow">
+															<h2 class="lang-holder bebas">
+																<span class="lang fr">
+																	<span class="symbols">T</span> Mes Passe-temps
+																</span>
+
+																<span class="lang en">
+																	<span class="symbols">T</span> Hobbies
+																</span>
+															</h2>
+
+															<div class="lang-holder">
+																<ul class="lang fr">
+																	<li>Passionné d’informatique<br>et de jeux vidéo</li>
+																	<li>Incollable question ciné<br>américain</li>
+																	<li>Lecteur insatiable</li>
+																	<li>Conquête spatiale, Astronomie</li>
+																	<li>Badminton</li>
+																</ul>
+																<ul class="lang en">
+																	<li>Passionate about computers<br>and video games</li>
+																	<li>Unbeatable on American<br>Cinema trivia</li>
+																	<li>Insatiable Reader</li>
+																	<li>Space Conquest, Astronomy</li>
+																	<li>Badminton</li>
+																</ul>
+															</div>
+														</div>
+														
+													</div>
+												</div>
+
+												<div class="mobile-only">
+													<h1 class="bebas text-blue">Fabrice Chiron</h1>
+													
+													<div class="job-title w300">
+														<div class="hide-overflow">
+															<div class="lang-holder">
+																<div class="lang fr">
+																	Développeur <span class="w600">UNITY/C# - Frontend JS</span><br>
+																	Graphiste PAO
+																</div>
+																<div class="lang en">
+																	<span class="w600">UNITY/C# - Frontend JS</span> Developer<br> 
+																	Graphic Designer
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="my-pitch w600 text-green">
+														<div class="hide-overflow">
+															<div class="lang-holder">
+																<div class="lang fr">
+																	Développeur Frontend et Graphiste accompli (12 et 5 ans d’expérience),  je me suis converti au développement Unity il y a près de 3 ans.<br>
+																	Adaptable et polyvalent, mon parcours diversifié allie créativité et expertise technique tout en apportant une perspective unique à chaque projet.
+																</div>
+																<div class="lang en">
+																	Experienced graphic designer (5 years) and Frontend developer (12 years), I transitioned to Unity development nearly 3 years ago.<br> 
+																	Adaptable and versatile, my diverse background combines creativity and technical expertise while bringing a unique perspective to each project.
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="resume-category pink">
+														<div class="hide-overflow">
+															<h2 class="lang-holder bebas">
+																<span class="lang fr"><span class="symbols">^</span> Compétences</span>
+
+																<span class="lang en"><span class="symbols">^</span> Tech Skills</span>
+															</h2>
+
+															<div class="lang-holder">
+																<ul class="lang fr">
+																	<li>
+																		<div class="bebas text-blue chevron">Unity</div>
+
+																		<ul class="chevron">
+																			<li>Développement C#</li>
+																			<li>Réalité Virtuelle/Augmentée, 3D, Mobile</li>
+																			<li>UI Design</li>
+																			<li>Animation</li>
+																		</ul>
+																	</li>
+
+																	<li>
+																		<div class="bebas text-blue chevron">Développement Frontend</div>
+
+																		<ul class="chevron">
+																			<li>HTML / CSS / Javascript</li>
+																			<li>Web Design</li>
+																		</ul>
+																	</li>
+
+																	<li>
+																		<div class="bebas text-blue chevron">Graphisme PAO - Modélisation 3D</div>
+
+																		<ul class="chevron">
+																			<li>Photoshop / Illustrator / Indesign</li>
+																		</ul>
+																	</li>
+																</ul>
+																<ul class="lang en">
+																	<li>
+																		<div class="bebas text-blue chevron">Unity</div>
+
+																		<ul class="chevron">
+																			<li>C# Development</li>
+																			<li>Virtual/Augmented Reality, 3D, Mobile</li>
+																			<li>UI Design</li>
+																			<li>Animation</li>
+																		</ul>
+																	</li>
+
+																	<li>
+																		<div class="bebas text-blue chevron">Frontend Development</div>
+
+																		<ul class="chevron">
+																			<li>HTML / CSS / Javascript</li>
+																			<li>Web Design</li>
+																		</ul>
+																	</li>
+
+																	<li>
+																		<div class="bebas text-blue chevron">Graphic Design - 3D Modeling</div>
+
+																		<ul class="chevron">
+																			<li>Photoshop / Illustrator / Indesign</li>
+																		</ul>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+
+													<div class="resume-category green">
+														<h2 class="lang-holder bebas">
+															<span class="lang fr"><span class="symbols">;</span> Expériences Professionnelles</span>
+
+															<span class="lang en"><span class="symbols">;</span> Work Experience</span>
+														</h2>
+
+														<div>
+															<ul>
+																<li>
+																	<div class="bebas text-blue">
+																		2021 - 2023: <span class="bigger-text text-white">Polar Eclipse</span>
+																	</div>
+
+																	<ul class="lang-holder">
+																		<li class="lang fr">Fondateur, Développeur UNITY 3D/VR, Game Creator</li>
+																		<li class="lang en">Founder, UNITY 3D/VR Developer, Game Creator</li>
+																	</ul>
+																</li>
+
+																<li>
+																	<div class="bebas text-blue">
+																		2013 - 2021: <span class="bigger-text text-white">Photobox</span>
+																	</div>
+
+																	<ul class="lang-holder">
+																		<li class="lang fr">Développeur Frontend, Tech Lead, Engineering Manager</li>
+																		<li class="lang en">Frontend Developer, Tech Lead, Engineering Manager</li>
+																	</ul>
+																</li>
+
+																<li>
+																	<div class="bebas text-blue">
+																		2013 - 2021: <span class="bigger-text text-white">Sup de Pub - INSEEC</span>
+																	</div>
+
+																	<ul class="lang-holder">
+																		<li class="lang fr">Intervenant : Séminaires d'initiation développement web</li>
+																		<li class="lang en">Occasional Speaker : Web dev initiation seminars</li>
+																	</ul>
+																</li>
+
+																<li>
+																	<div class="bebas text-blue">
+																		2009 - 2013: <span class="bigger-text text-white">JustWM</span>
+																	</div>
+
+																	<ul class="lang-holder">
+																		<li class="lang fr">Responsable développement frontend, Web Designer, Graphiste PAO, Retoucheur Photo</li>
+																		<li class="lang en">Lead Frontend Developer, Web Designer, Graphic Design, Photo Retoucher</li>
+																	</ul>
+																</li>
+															</ul>
+														</div>
+													</div>
+
+													<div class="resume-category orange">
+														<h2 class="lang-holder bebas">
+															<span class="lang fr"><span class="symbols">?</span> Formations</span>
+
+															<span class="lang en"><span class="symbols">?</span> Schooling</span>
+														</h2>
+
+														<div>
+															<ul>
+																<li>
+																	<div class="bebas text-blue">
+																		2021: <span class="bigger-text text-white">Game Developer</span> <span class="smaller-text text-white"> - Unity</span>
+																	</div>
+																</li>
+
+																<li>
+																	<div class="bebas text-blue">
+																		<span class="lang-holder">
+																			<span class="lang fr">
+																				2006: <span class="bigger-text text-white">école d'arts Maryse Eloy</span> <span class="smaller-text text-white"> - Arts Appliqués</span>
+																			</span>
+																			
+																			<span class="lang en">
+																				2006: <span class="bigger-text text-white">école d'arts Maryse Eloy</span> <span class="smaller-text text-white"> - Applied Arts</span>
+																			</span>
+																		</span>
+																	</div>
+																</li>
+															</ul>
+														</div>
+													</div>
+													
+												</div>
+
+											</div>
+										</div>
+
+										<div class="flex1">
+											<div class="part right">
+												<div class="no-mobile">
+													<h1 class="bebas text-blue">Fabrice Chiron</h1>
+													
+													<div class="job-title w300">
+														<div class="lang-holder">
+															<div class="lang fr">
+																Développeur <span class="w600">UNITY/C# - Frontend JS</span><br>
+																Graphiste PAO
+															</div>
+															<div class="lang en">
+																<span class="w600">UNITY/C# - Frontend JS</span> Developer<br> 
+																Graphic Designer
+															</div>
+														</div>
+													</div>
+
+													<div class="my-pitch w600 text-green">
+														<div class="lang-holder">
+															<div class="lang fr">
+																Développeur Frontend et Graphiste accompli (12 et 5 ans d’expérience),  je me suis converti au développement Unity il y a près de 3 ans.<br>
+																Adaptable et polyvalent, mon parcours diversifié allie créativité et expertise technique tout en apportant une perspective unique à chaque projet.
+															</div>
+															<div class="lang en">
+																Experienced graphic designer (5 years) and Frontend developer (12 years), I transitioned to Unity development nearly 3 years ago.<br> 
+																Adaptable and versatile, my diverse background combines creativity and technical expertise while bringing a unique perspective to each project.
+															</div>
+														</div>
+													</div>
+
+													<div class="resume-category pink">
+														<h2 class="lang-holder bebas">
+															<span class="lang fr"><span class="symbols">^</span> Compétences</span>
+
+															<span class="lang en"><span class="symbols">^</span> Tech Skills</span>
+														</h2>
+
+														<div class="lang-holder">
+															<ul class="lang fr">
+																<li>
+																	<div class="bebas text-blue chevron">Unity</div>
+
+																	<ul class="chevron">
+																		<li>Développement C#</li>
+																		<li>Réalité Virtuelle/Augmentée, 3D, Mobile</li>
+																		<li>UI Design</li>
+																		<li>Animation</li>
+																	</ul>
+																</li>
+
+																<li>
+																	<div class="bebas text-blue chevron">Développement Frontend</div>
+
+																	<ul class="chevron">
+																		<li>HTML / CSS / Javascript</li>
+																		<li>Web Design</li>
+																	</ul>
+																</li>
+
+																<li>
+																	<div class="bebas text-blue chevron">Graphisme PAO - Modélisation 3D</div>
+
+																	<ul class="chevron">
+																		<li>Photoshop / Illustrator / Indesign</li>
+																	</ul>
+																</li>
+															</ul>
+															<ul class="lang en">
+																<li>
+																	<div class="bebas text-blue chevron">Unity</div>
+
+																	<ul class="chevron">
+																		<li>C# Development</li>
+																		<li>Virtual/Augmented Reality, 3D, Mobile</li>
+																		<li>UI Design</li>
+																		<li>Animation</li>
+																	</ul>
+																</li>
+
+																<li>
+																	<div class="bebas text-blue chevron">Frontend Development</div>
+
+																	<ul class="chevron">
+																		<li>HTML / CSS / Javascript</li>
+																		<li>Web Design</li>
+																	</ul>
+																</li>
+
+																<li>
+																	<div class="bebas text-blue chevron">Graphic Design - 3D Modeling</div>
+
+																	<ul class="chevron">
+																		<li>Photoshop / Illustrator / Indesign</li>
+																	</ul>
+																</li>
+															</ul>
+														</div>
+													</div>
+
+													<div class="resume-category green">
+														<h2 class="lang-holder bebas">
+															<span class="lang fr"><span class="symbols">;</span> Expériences Professionnelles</span>
+
+															<span class="lang en"><span class="symbols">;</span> Work Experience</span>
+														</h2>
+
+														<div>
+															<ul>
+																<li>
+																	<div class="bebas text-blue">
+																		2021 - 2023: <span class="bigger-text text-white">Polar Eclipse</span>
+																	</div>
+
+																	<ul class="lang-holder">
+																		<li class="lang fr">Fondateur, Développeur UNITY 3D/VR, Game Creator</li>
+																		<li class="lang en">Founder, UNITY 3D/VR Developer, Game Creator</li>
+																	</ul>
+																</li>
+
+																<li>
+																	<div class="bebas text-blue">
+																		2013 - 2021: <span class="bigger-text text-white">Photobox</span>
+																	</div>
+
+																	<ul class="lang-holder">
+																		<li class="lang fr">Développeur Frontend, Tech Lead, Engineering Manager</li>
+																		<li class="lang en">Frontend Developer, Tech Lead, Engineering Manager</li>
+																	</ul>
+																</li>
+
+																<li>
+																	<div class="bebas text-blue">
+																		2013 - 2021: <span class="bigger-text text-white">Sup de Pub - INSEEC</span>
+																	</div>
+
+																	<ul class="lang-holder">
+																		<li class="lang fr">Intervenant : Séminaires d'initiation développement web</li>
+																		<li class="lang en">Occasional Speaker : Web dev initiation seminars</li>
+																	</ul>
+																</li>
+
+																<li>
+																	<div class="bebas text-blue">
+																		2009 - 2013: <span class="bigger-text text-white">JustWM</span>
+																	</div>
+
+																	<ul class="lang-holder">
+																		<li class="lang fr">Responsable développement frontend, Web Designer, Graphiste PAO, Retoucheur Photo</li>
+																		<li class="lang en">Lead Frontend Developer, Web Designer, Graphic Design, Photo Retoucher</li>
+																	</ul>
+																</li>
+															</ul>
+														</div>
+													</div>
+
+													<div class="resume-category orange">
+														<h2 class="lang-holder bebas">
+															<span class="lang fr"><span class="symbols">?</span> Formations</span>
+
+															<span class="lang en"><span class="symbols">?</span> Schooling</span>
+														</h2>
+
+														<div>
+															<ul>
+																<li>
+																	<div class="bebas text-blue">
+																		2021: <span class="bigger-text text-white">Game Developer</span> <span class="smaller-text text-white"> - Unity</span>
+																	</div>
+																</li>
+
+																<li>
+																	<div class="bebas text-blue">
+																		<span class="lang-holder">
+																			<span class="lang fr">
+																				2006: <span class="bigger-text text-white">école d'arts Maryse Eloy</span> <span class="smaller-text text-white"> - Arts Appliqués</span>
+																			</span>
+																			
+																			<span class="lang en">
+																				2006: <span class="bigger-text text-white">école d'arts Maryse Eloy</span> <span class="smaller-text text-white"> - Applied Arts</span>
+																			</span>
+																		</span>
+																	</div>
+																</li>
+															</ul>
+														</div>
+													</div>
+													
+												</div>
+
+
+												<div class="personal mobile-only">
+													<div class="personal-category details top-right">
+														
+															
+															<h2 class="bebas"><span class="symbols">.</span> Contact</h2>
+
+															<ul>
+																<li><span class="symbols">K</span> <a href="mailto:fabrice.chiron@polar-eclipse.com">fabrice.chiron@polar-eclipse.com</a></li>
+																<li><span class="symbols">|</span> <a href="tel:+33676398195">06 76 39 81 95</a></li>
+																<li><span class="symbols"><span class="smaller-text">ç</span></span> <a href="https://www.linkedin.com/in/fabrice-chiron-12294963/" target="_blank">fabrice-chiron-12294963</a></li>
+															</ul>
+															
+													</div>
+
+													<div class="personal-category">
+														<div class="hide-overflow">
+															<h2 class="lang-holder bebas">
+																<span class="lang fr">
+																	<span class="symbols">¡</span> Savoir-être
+																</span>
+
+																<span class="lang en">
+																	<span class="symbols">¡</span> Soft Skills
+																</span>
+															</h2>
+
+															<div class="lang-holder">
+																<p class="lang fr">Travail en équipe, Rigueur,<br>Résolution des problèmes,<br>Curiosité, Créativité, Autonomie<br>
+																...Très sympa :)</p>
+																<p class="lang en">Teamplayer, Rigorous,<br>Problem solver, Curious,<br>Creative, Autonomous<br>
+																...Nive guy :)</p>
+															</div>
+														</div>
+													</div>
+
+													<div class="personal-category details top-right">
+														<div class="hide-overflow">
+															<h2 class="lang-holder bebas">
+																<span class="lang fr">
+																	<span class="symbols">«</span> Mes Plus
+																</span>
+
+																<span class="lang en">
+																	<span class="symbols">«</span> Other Skills
+																</span>
+															</h2>
+
+															<div class="lang-holder">
+																<ul class="lang fr">
+																	<li>Français (langue maternelle)</li>
+																	<li>Anglais courant</li>
+																	<li>Méthodes Agiles: SCRUM, KANBAN</li>
+																</ul>
+																<ul class="lang en">
+																	<li>French: native language</li>
+																	<li>English: Fluent</li>
+																	<li>Agile Methods: SCRUM, KANBAN</li>
+																</ul>
+															</div>
+														</div>
+														
+													</div>
+
+													<div class="personal-category details bottom-right">
+														<div class="hide-overflow">
+															<h2 class="lang-holder bebas">
+																<span class="lang fr">
+																	<span class="symbols">T</span> Mes Passe-temps
+																</span>
+
+																<span class="lang en">
+																	<span class="symbols">T</span> Hobbies
+																</span>
+															</h2>
+
+															<div class="lang-holder">
+																<ul class="lang fr">
+																	<li>Passionné d’informatique<br>et de jeux vidéo</li>
+																	<li>Incollable question ciné<br>américain</li>
+																	<li>Lecteur insatiable</li>
+																	<li>Conquête spatiale, Astronomie</li>
+																	<li>Badminton</li>
+																</ul>
+																<ul class="lang en">
+																	<li>Passionate about computers<br>and video games</li>
+																	<li>Unbeatable on American<br>Cinema trivia</li>
+																	<li>Insatiable Reader</li>
+																	<li>Space Conquest, Astronomy</li>
+																	<li>Badminton</li>
+																</ul>
+															</div>
+														</div>
+														
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="bg-overlay no-events no-mobile"></div>
+									</div>
+								</div>
+							</div>
+
+						</section>
+			    		
+		    	</div>
+		    </div>
+		</div>
+	</div>
+
+
+</body>
+</html>
