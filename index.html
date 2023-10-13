@@ -24,16 +24,16 @@
 	<div id="skybox">
 		<div class="vr-container"> <!-- container div -->
 		    <a-scene class="vr-background"> <!-- the  a-frame embed code -->
-		      <a-entity rotation="0 0 0"> 
+		      <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 600000; easing: linear;"> 
 		      	<!-- rotation value sets the starting view point, play around! -->
-		    	<a-animation attribute="rotation" 
+		    	<!-- <a-animation attribute="rotation" 
 		                 dur="600000"
 		                 easing="linear"
 		                 fill="forwards"
 		                 to="0 360 0"
 		                 repeat="indefinite">
 		                 	
-                </a-animation> <!-- remove if you don’t like the automatic movement -->
+                </a-animation> --> <!-- remove if you don’t like the automatic movement -->
 	    	    <a-sky src="img/Stellarium3.webp"></a-sky>
 		      </a-entity>
 		    </a-scene>
