@@ -106,7 +106,7 @@ ul {
   pointer-events: none;
   width: 100%;
   bottom: 0;
-  top: 0;
+  height: 100%;
   left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
@@ -141,7 +141,7 @@ section:target {
 }
 
 header {
-  height: calc(100vh - 4.33em);
+  height: 100%;
   background-size: contain;
   margin: 0 50px;
   position: relative;
@@ -185,6 +185,7 @@ nav {
 
 nav.sticky {
   z-index: 1;
+  margin-top: -4.33em;
 }
 
 nav ul {
