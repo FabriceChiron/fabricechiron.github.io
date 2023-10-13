@@ -32,7 +32,13 @@
 	section {
 		.sticky {
 			position: static;
-		}	
+		}
+
+		.flex-group {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 
 		.resume {
 			h1 {
@@ -68,6 +74,10 @@
 
 				.personal-category {
 					border-radius: 5px;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
 
 					&:after {
 						content: none;
