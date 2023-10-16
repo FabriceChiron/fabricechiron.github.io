@@ -6,6 +6,13 @@ html.mobile {
 	font-size: 12px;
 }
 
+.external-link {
+	font-size: 0.7em;
+  position: absolute;
+  right: 0;
+  line-height: calc(1.5em/0.7);
+}
+
 a-scene {
 	background: #000;
 }
@@ -203,8 +210,10 @@ nav {
   background: rgba(0,0,0,0);
 
   &.sticky {
-  	z-index: 1;
+  	z-index: 3;
   	margin-top: -4.33em;
+  	height: 4.33em;
+  	box-sizing: border-box;
   }
 
 	ul{
@@ -378,6 +387,7 @@ section{
 
 	.hide-overflow {
 		overflow: hidden;
+		width: 100%;
 	}
 
 	.resume {

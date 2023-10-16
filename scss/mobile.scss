@@ -12,6 +12,11 @@
 		max-width: none;
 	}
 
+	.external-link {
+		font-size: 0.8em;
+	  line-height: calc(1.5em/0.8);
+	}
+
 	.mobile-column {
 		flex-direction: column;
 	}
