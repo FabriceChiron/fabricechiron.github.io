@@ -10,7 +10,7 @@ html.mobile {
 .external-link {
   font-size: 0.7em;
   position: absolute;
-  right: 0;
+  right: 1px;
   line-height: calc(1.5em/0.7);
 }
 
