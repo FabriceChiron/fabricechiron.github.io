@@ -11,7 +11,7 @@ a-scene {
   background: #000;
 }
 
-.a-enter-vr {
+[aframe-injected] {
   display: none;
 }
 
@@ -29,6 +29,7 @@ input[name="lang"] {
 #lang-fr:checked ~ #skybox .lang.en {
   /* font-size: 0; */
   color: rgba(0, 0, 0, 0) !important;
+  pointer-events: none;
 }
 
 #lang-en:checked ~ #skybox [for="lang-en"],
@@ -45,6 +46,7 @@ input[name="lang"] {
 #lang-en:checked ~ #skybox .lang.fr {
   /* font-size: 0; */
   color: rgba(0, 0, 0, 0) !important;
+  pointer-events: none;
 }
 
 .lang-holder {
@@ -542,6 +544,10 @@ section .resume h2 .symbols {
 
 section .resume .resume-category {
   margin-bottom: 0.2em;
+}
+
+section .resume .resume-category:last-child {
+  margin-top: 2.2em;
 }
 
 section .resume ul li div {

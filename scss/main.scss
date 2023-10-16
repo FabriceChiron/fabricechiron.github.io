@@ -10,7 +10,7 @@ a-scene {
 	background: #000;
 }
 
-.a-enter-vr {
+[aframe-injected] {
 	display: none;
 }
 
@@ -30,6 +30,7 @@ input[name="lang"]{
 	.lang.en {
 		/* font-size: 0; */
 		color: rgba(0,0,0,0) !important;
+		pointer-events: none;
 	}
 }
 
@@ -48,6 +49,7 @@ input[name="lang"]{
 	.lang.fr {
 		/* font-size: 0; */
 		color: rgba(0,0,0,0) !important;
+		pointer-events: none;
 	}
 }
 
@@ -569,6 +571,10 @@ section{
 
 		.resume-category {
 			margin-bottom: 0.2em;
+
+			&:last-child {
+				margin-top: 2.2em;
+			}
 		}
 
 
