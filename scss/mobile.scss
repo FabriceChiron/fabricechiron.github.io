@@ -19,11 +19,17 @@
 
 	.mobile-column {
 		flex-direction: column;
+		
+		&.mobile-inverted {
+			flex-direction: column-reverse;
+		}
 	}
+
 
 	nav {
 		ul {
 			gap: 5px;
+			margin: 0 10px;
 
 			li {
 				a:not(.symbols), label {

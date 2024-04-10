@@ -7,6 +7,11 @@ html.mobile {
   font-size: 12px;
 }
 
+html.no-transition * {
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+}
+
 .external-link {
   font-size: 0.7em;
   position: absolute;
@@ -20,6 +25,11 @@ a-scene {
 
 [aframe-injected] {
   display: none;
+}
+
+.chevron-item:before {
+  font-family: "WebSymbolsLigaRegular";
+  content: "× ";
 }
 
 input[name="lang"] {
@@ -37,6 +47,24 @@ input[name="lang"] {
   /* font-size: 0; */
   color: rgba(0, 0, 0, 0) !important;
   pointer-events: none;
+  text-shadow: none;
+}
+
+#lang-fr:checked ~ #skybox nav .lang-holder {
+  left: 0;
+}
+
+#lang-fr:checked ~ #skybox nav .lang-holder .lang {
+  width: auto;
+  transition: none;
+}
+
+#lang-fr:checked ~ #skybox nav .lang-holder .lang.fr {
+  font-size: 1em;
+}
+
+#lang-fr:checked ~ #skybox nav .lang-holder .lang.en {
+  padding: 0;
 }
 
 #lang-en:checked ~ #skybox [for="lang-en"],
@@ -54,6 +82,24 @@ input[name="lang"] {
   /* font-size: 0; */
   color: rgba(0, 0, 0, 0) !important;
   pointer-events: none;
+  text-shadow: none;
+}
+
+#lang-en:checked ~ #skybox nav .lang-holder {
+  left: 0;
+}
+
+#lang-en:checked ~ #skybox nav .lang-holder .lang {
+  width: auto;
+  transition: none;
+}
+
+#lang-en:checked ~ #skybox nav .lang-holder .lang.en {
+  font-size: 1em;
+}
+
+#lang-en:checked ~ #skybox nav .lang-holder .lang.fr {
+  padding: 0;
 }
 
 .lang-holder {
@@ -83,6 +129,8 @@ body {
   --white: rgb(255, 255, 255);
   --color: var(--white);
   --black25: rgba(0, 0, 0, 0.25);
+  --black: rgba(0, 0, 0, 1);
+  --darkgrey: #282827;
 }
 
 ul {
@@ -213,6 +261,18 @@ nav ul {
 
 nav ul li {
   display: flex;
+}
+
+nav ul li .hide-overflow {
+  width: auto;
+}
+
+nav ul li .hide-overflow .lang-holder {
+  width: auto;
+}
+
+nav ul li .hide-overflow .lang-holder .lang {
+  font-size: 0;
 }
 
 nav ul li a, nav ul li label {
@@ -599,6 +659,10 @@ section .video-wrapper {
   background: #000;
 }
 
+section h2 {
+  text-shadow: 0.1em 0.1em black;
+}
+
 section .sticky {
   top: -2.15em;
   align-self: start;
@@ -612,10 +676,22 @@ section .flex {
 
 section .flex [class^="flex"] {
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+section .flex .black {
+  background: var(--black);
+}
+
+section .flex .darkgrey {
+  background: var(--darkgrey);
 }
 
 section .flex video {
   display: block;
+  flex: 1;
+  background-color: inherit;
 }
 
 section .flex .overlay {
@@ -624,6 +700,14 @@ section .flex .overlay {
   left: 0;
   /* padding: 1.25em; */
   right: 0;
+}
+
+section .flex .overlay.static {
+  position: static;
+}
+
+section .flex .overlay.static p {
+  background: var(--black);
 }
 
 section .flex .overlay .lang-holder {
@@ -664,7 +748,7 @@ section .flex img {
   display: block;
 }
 
-section .flex p {
+section .flex p, section .flex ul {
   margin: 0;
   padding: 0;
 }
@@ -702,7 +786,7 @@ section .bg-2 {
   color: #fff;
 }
 
-section p {
+section p, section ul.details {
   color: inherit;
   font-size: 1.25em;
   padding: 1em;
@@ -712,4 +796,8 @@ section .title {
   color: #531fb5;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+section a.title {
+  display: block;
 }

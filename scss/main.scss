@@ -6,6 +6,11 @@ html.mobile {
 	font-size: 12px;
 }
 
+html.no-transition *{
+	transition-duration: 0s !important;
+	transition-delay: 0s !important;
+}
+
 .external-link {
 	font-size: 0.7em;
   position: absolute;
@@ -21,6 +26,11 @@ a-scene {
 	display: none;
 }
 
+.chevron-item:before {
+	font-family: "WebSymbolsLigaRegular";
+	content: "× ";
+}
+
 input[name="lang"]{
 	display: none;
 }
@@ -33,12 +43,31 @@ input[name="lang"]{
 		cursor: default;
 	}	
 
-
 	.lang.en {
 		/* font-size: 0; */
 		color: rgba(0,0,0,0) !important;
 		pointer-events: none;
+		text-shadow: none;
 	}
+
+	nav {
+		.lang-holder{
+			left: 0;
+
+			.lang {
+				width: auto;
+				transition: none;
+
+				&.fr {
+					font-size: 1em;
+				}
+				&.en {
+					padding: 0;
+				}
+			}
+		}
+	}
+
 }
 
 #lang-en:checked ~ #skybox {
@@ -57,6 +86,26 @@ input[name="lang"]{
 		/* font-size: 0; */
 		color: rgba(0,0,0,0) !important;
 		pointer-events: none;
+		text-shadow: none;
+	}
+
+
+	nav {
+		.lang-holder{
+			left: 0;
+			
+			.lang {
+				width: auto;
+				transition: none;
+				
+				&.en {
+					font-size: 1em;
+				}
+				&.fr {
+					padding: 0;
+				}
+			}
+		}
 	}
 }
 
@@ -90,6 +139,8 @@ body{
   --color: var(--white);
 
   --black25: rgba(0, 0, 0, 0.25);
+  --black: rgba(0, 0, 0, 1);
+  --darkgrey: #282827;
 }
 
 ul {
@@ -226,6 +277,18 @@ nav {
 	  li {
 
 	  	display: flex;
+
+	  	.hide-overflow{
+				width: auto;
+
+				.lang-holder{
+					width: auto;
+
+					.lang{
+						font-size: 0;
+					}
+				}
+			}
 
 	  	a, label {
 	  		background: rgba(255, 255, 255, 0.8);
@@ -389,6 +452,8 @@ section{
 		overflow: hidden;
 		width: 100%;
 	}
+
+
 
 	.resume {
 
@@ -641,6 +706,10 @@ section{
 		background: #000;
 	}
 
+	h2 {
+		text-shadow: 0.1em 0.1em rgba(0,0,0,1);
+	}
+
 	.sticky {
 		top: -2.15em;
 		align-self: start;
@@ -653,10 +722,22 @@ section{
 
 		[class^="flex"]{
 			position: relative;
+			display: flex;
+	    flex-direction: column;
+		}
+
+		.black {
+			background: var(--black);
+		}
+
+		.darkgrey {
+			background: var(--darkgrey);
 		}
 
 		video {
 			display: block;
+			flex: 1;
+			background-color: inherit;
 		}
 
 		.overlay {
@@ -665,6 +746,14 @@ section{
 			left: 0;
 			/* padding: 1.25em; */
 			right: 0;
+
+			&.static{
+				position: static;
+
+				p{
+					background: var(--black);
+				}
+			}
 
 			.lang-holder {
 		    align-items: flex-end;
@@ -705,7 +794,7 @@ section{
 			display: block;
 		}
 
-		p {
+		p, ul {
 			margin: 0;
 			padding: 0;
 		}
@@ -749,7 +838,7 @@ section{
 		color: #fff;
 	}
 
-	p {
+	p, ul.details {
 		
 		color: inherit;
 		font-size: 1.25em;
@@ -760,5 +849,9 @@ section{
 		color: #531fb5;
     font-weight: 900;
     text-transform: uppercase;
+	}
+
+	a.title {
+		display: block;
 	}
 }

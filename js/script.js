@@ -49,9 +49,6 @@ function triggerScroll() {
     document.querySelector(`a[href="${location.hash}"]`).classList.add("clicked");
 
     console.log(document.querySelector(`a[href="${location.hash}"]`));
-
-    /*locationHashChanged();*/
-
   }
   else {
     console.log("no hash");
