@@ -23,7 +23,7 @@ setTimeout(function() {
 
 
 function locationHashChanged() {
-  if (location.hash === "#playing-with-planets") {
+  if (location.hash === "#hands-on-planets") {
     console.log("Playing video");
     document.querySelector("#logo-animation").play();
   }
